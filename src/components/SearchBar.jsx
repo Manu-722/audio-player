@@ -5,6 +5,7 @@ const SearchBar = ({ query, setQuery, searchMusic }) => {
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        onKeyPress={(e) => e.key === "Enter" && searchMusic()}
         placeholder="Search for a song or artist..."
       />
       <button onClick={searchMusic}>🔍 Search</button>

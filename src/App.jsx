@@ -14,7 +14,6 @@ const previewSongs = [
     previewUrl:
       "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/bf/3c/0c/bf3c0cb4-3806-b177-9cb0-2637bda015ad/mzaf_12407213020673473714.plus.aac.p.m4a",
   },
-  // Add 3 more preview songs here...
 ];
 
 const App = () => {
@@ -46,15 +45,12 @@ const App = () => {
       <Navbar />
       <SearchBar query={query} setQuery={setQuery} searchMusic={searchMusic} />
 
-      {/* Trending Songs */}
       <h2>Trending Songs</h2>
-      <SongList songs={previewSongs.slice(0, 4)} onSelect={setCurrentSong} addToFavorites={addToFavorites} />
+      <SongList songs={previewSongs} onSelect={setCurrentSong} addToFavorites={addToFavorites} />
 
-      {/* Search Results */}
       <h2>Search Results</h2>
       <SongList songs={songs} onSelect={setCurrentSong} addToFavorites={addToFavorites} />
 
-      {/* Music Player */}
       {currentSong && <PlayerControls song={currentSong} />}
     </div>
   );
