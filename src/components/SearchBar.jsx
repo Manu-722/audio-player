@@ -7,7 +7,7 @@ const SearchBar = ({ query, setQuery, searchMusic }) => {
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search for a song or artist..."
       />
-      <button onClick={searchMusic}>Search</button>
+      <button onClick={searchMusic}>🔍 Search</button>
     </div>
   );
 };
