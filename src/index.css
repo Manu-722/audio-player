@@ -3,13 +3,16 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .navbar {
-  background-color: #0073e6;
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 15px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
   font-size: 20px;
 }
 
@@ -22,15 +25,26 @@ input {
   padding: 10px;
   border: 2px solid #ddd;
   border-radius: 5px;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #0073e6;
+  outline: none;
 }
 
 button {
   padding: 10px;
-  background-color: #0073e6;
-  color: white;
+  background-color: var(--button-bg);
+  color: var(--button-text);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #005bb5;
 }
 
 .results {
@@ -40,15 +54,67 @@ button {
 }
 
 .card {
-  background: white;
+  background: var(--card-background);
   border: 1px solid #ddd;
   padding: 10px;
   margin: 10px;
   width: 200px;
   border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 img {
   width: 100%;
   border-radius: 5px;
+}
+/* Light Mode */
+:root {
+  --background-color: #f4f4f4;
+  --text-color: #000;
+  --card-background: #fff;
+  --button-bg: #0073e6;
+  --button-text: #fff;
+}
+
+/* Dark Mode */
+.dark {
+  --background-color: #181818;
+  --text-color: #fff;
+  --card-background: #222;
+  --button-bg: #005bb5;
+  --button-text: #fff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 15px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-btn {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #003d7a;
 }
