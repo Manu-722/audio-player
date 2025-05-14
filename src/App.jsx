@@ -8,7 +8,7 @@ const App = () => {
   const [results, setResults] = useState([]);
 
   const searchMusic = async () => {
-    const url = `https://itunes.apple.com/search?term=${encodeURIComponent(query)}&media=music&limit=10`;
+    const url = `https://itunes.apple.com/search?term=${encodeURIComponent(query)}&media=music&limit=20`;
 
     try {
       const response = await fetch(url);
